@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <style type= 'text/css'>
+
+        div#copyright{
+            position:fixed;   
+            bottom:2%;
+            right:2%;     
+        }
+
+        img#imagen{
+            border-style: outset;
+            width: 400px;
+            height: 150px;
+            position: absolute;
+            right: 35%;
+            border-color:#5882FA;
+        }
+
+        body {
+            background-image:url("http://definicion.mx/wp-content/uploads/2013/08/Cultura.png");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: bottom left; 
+        }
+
+        div#inicio{
+            border-style: outset;
+            background-color: e3e3e3;
+            border-color: #5882FA;
+            width: 103px;
+            height: 40px;
+            right: 1.7%;
+            border-top-width: 5px;
+            border-right-width: 5px;
+            border-bottom-width: 5px;
+            border-left-width: thin;
+            position: absolute;
+        }
+
+
+        div#info{
+            border-style: outset;
+            border-color: #5882FA;
+            width: 500px;
+            height: 750px;
+            right: 33%;
+            top:40%;
+            border-top-width: 5px;
+            border-right-width: 5px;
+            border-bottom-width: 5px;
+            border-left-width: thin;
+            position: absolute;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <img id="imagen" src="http://www.radiogremial.com.ar/wp-content/uploads/2014/07/cultural_11.jpg" />
+    <div id='copyright'>
+            <p>&#169Jesus Moreno Pinto<p>
+    </div>
+
+    <div id="inicio">
+            {% if inicio %}
+                <a href= {{inicio}}>Ir a página principal</a></p>
+            {% endif %}
+    </div>
+
+    <div id="info">
+        <h2 align = center>Ayuda</h2>
+            <p><b>Página principal:</b><p>
+            <p>Aparece un listado de los 10 eventos más cercanos a la fecha actual.</br>
+            En la parte derecha de la página aparecerá un listado de canales de usuarios
+            a los cuales se podrá acceder y ver que eventos se han guardado.</p>
+            <p><b>Registrarse:</b><p>
+            <p>En caso de que ese nombre de usuario ya exista saltará un mensaje infomándole de ello.
+            Si se acepta dicho nombre de usuario, se le redirigirá a la pagina /todas y ya podrá iniciar
+            sesión como usuario de la página.</p>
+            <p>Una vez iniciada la sesión podrá añadir eventos a su página personal, donde aparecen unicamente los
+            añadidos, además podrá cambiar el aspecto de la página(borde de menú,borde imagen,color copyright , color
+            y tamaño de la letra).</p>
+            <p><b>Recurso /todas:</b><p>
+            <p>En esta página aparecerá el número de eventos disponibles y un botón para actualizar el
+            listado(si estás registrado),un listado de todos ellos, y menús para filtrar por los que tienen más me gusta
+            y buscar por título(cualquiera que contenga la palabra que se busque).</p>
+            <p><b>Mi página:</b><p>
+            <p>Además de la posibilidad de cambiar el aspecto de la página personal
+            ,podrá poner un título a la página y un comentario describiéndola.</p>
+            
+    </div>
+
+
+</body>
+
+
+</html>

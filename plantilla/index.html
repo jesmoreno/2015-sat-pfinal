@@ -1,0 +1,473 @@
+<html>
+<head>
+    <style type= 'text/css'>
+
+        div#primero{
+            border-style: outset;
+            background-color: e3e3e3;
+            border-color: #5882FA;
+            width: 70px;
+            height: 40px;
+            right: 24.5%;
+            font-size:11pt;
+            border-top-width: 5px;
+            border-right-width: 5px;
+            border-bottom-width: 5px;
+            border-left-width: thin;
+            position: absolute;
+        }
+
+        div#segundo {
+            border-style: outset;
+            background-color: e3e3e3;
+            border-color: #5882FA;
+            width: 65px;
+            height: 40px;
+            right: 19%;
+            font-size:11pt;
+            border-top-width: 5px;
+            border-right-width: 5px;
+            border-bottom-width: 5px;
+            border-left-width: thin;
+            position: absolute;
+        }
+
+
+        div#out {
+            border-style: outset;
+            background-color: e3e3e3;
+            border-color: #5882FA;
+            width: 103px;
+            height: 40px;
+            right: 1.7%;
+            font-size:11pt;
+            border-top-width: 5px;
+            border-right-width: 5px;
+            border-bottom-width: 5px;
+            border-left-width: thin;
+            position: absolute;
+        }
+
+        div#tercero {
+            border-style: outset;
+            background-color: e3e3e3;
+            border-color: #5882FA;
+            width: 110px;
+            height: 40px;
+            right: 10%;
+            font-size:11pt;
+            border-top-width: 5px;
+            border-right-width: 5px;
+            border-bottom-width: 5px;
+            border-left-width: thin;
+            position: absolute;
+        }
+
+        div#cuarto {
+            border-style: outset;
+            background-color: e3e3e3;
+            border-color: #5882FA;
+            width: 100px;
+            height: 40px;
+            right: 2%;
+            font-size:11pt;
+            border-top-width: 5px;
+            border-right-width: 5px;
+            border-bottom-width: 5px;
+            border-left-width: thin;
+            position: absolute;
+        }
+
+        div#actividades{
+            border-style: outset;
+            background-color: white;
+            margin: 0;
+            text-align:left;
+            border-width: 10px;
+            border-left-width: thin;
+            border-top-color: #5882FA;
+            border-right-color: #5882FA;
+            border-bottom-color: #5882FA;
+        }
+
+
+        div#actividad{
+            border-style: outset;
+            background-color: white;
+            text-align:left;
+            border-width: 10px;
+            border-left-width: thin;
+            border-top-color: #5882FA;
+            border-right-color: #5882FA;
+            border-bottom-color: #5882FA;
+            position: absolute;
+            top: 30%; 
+            left: 37%;
+            width: 650px;
+        }
+
+        div#actualizar{
+            position: absolute;
+            left: 25%;
+            top: 7%;
+        }
+
+
+        div#nombrePag{
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            font-size:
+            width: 200px;
+        }
+
+        div#tablaPersonal{
+            position: absolute;
+            left:38%;
+            top:45%;
+            width: 200px;
+        }
+
+        div#canal{
+            position: absolute;
+            border-style: outset;
+            background-color: white;
+            text-align:left;
+            border-width: 10px;
+            border-left-width: thin;
+            border-top-color: #5882FA;
+            border-right-color: #5882FA;
+            border-bottom-color: #5882FA;
+            right:5%;
+            top:30%;
+            width: 300px;
+        }
+
+
+        div#comentario{
+            position: absolute;
+            top: 25%; 
+            right: 5%;
+        }
+
+        div#cambioTitulo{
+           position: absolute; 
+           top: 8%; 
+           right: 5%;
+        }
+
+
+        div#tabla{
+            border-style: outset;
+            position: absolute;
+            top: 30%; 
+            left: 37%;
+            width: 350px;
+        }
+
+        div#filtro{
+          
+            position: absolute;
+            top: 30%; 
+            left: 70%;
+        }
+
+        div#filtro2{
+            position: absolute;
+            top: 35%; 
+            left: 70%;
+            
+        }
+
+        div#letraPag{
+            position: absolute;
+            top: 50%;
+            right: 2%;        
+        }
+
+
+        body {
+            background-image:url("http://definicion.mx/wp-content/uploads/2013/08/Cultura.png");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: bottom left; 
+        }
+
+        
+ /************************CAMBIOS EN EL CSS*******************************/       
+        /*cambiar color borde imagen: terminado*/
+        img#imagen{
+            border-style: outset;
+            width: 400px;
+            height: 150px;
+            position: absolute;
+            right: 35%;
+            border-color:{{color}};
+        }
+        /*Cambia tamaño letra y color: terminado*/
+        body tr,h2{
+            font-size:{{letra}};
+            color:{{color}}; 
+        }
+        /*Cambiar color borde: terminado*/
+        body div#primero,div#segundo,div#tercero,div#cuarto,div#out{
+            border-color:{{color}};
+        }
+        /*Cambiar color html: terminado*/
+        div#copyright{
+            position:fixed;   
+            bottom:2%;
+            right:2%;
+            color:{{color}};     
+        }
+
+    </style>
+</head>
+    
+    <body>
+        <img id="imagen" src="http://www.radiogremial.com.ar/wp-content/uploads/2014/07/cultural_11.jpg" />
+
+        <div id='copyright'>
+            <p>&#169Jesus Moreno Pinto<p>
+        </div>
+
+        {% if dirRegistro %}
+
+            <div id="cuarto">
+                <a href= "{{dirRegistro}}"><p>Registrarse</a></p>
+            </div>
+
+            <div id="tercero">
+                <a href= "{{dirIniSesion}}"><p>Iniciar sesion</a></p>
+            </div>
+        
+            {% if todas %}
+                <div id="segundo">
+                    <a href= "{{todas}}"><p>Todas</a></p>
+                </div>
+            {% endif %}
+
+
+            {% if ayuda %}
+                <div id="primero">
+                    <a href= "{{ayuda}}"><p>Ayuda</a></p>
+                </div>
+            {% endif %}
+            
+            {% if inicio %}
+                <div id="segundo">
+                    <a href= "{{inicio}}"><p>Inicio</a></p>
+                </div>
+            {% endif %}
+
+        {% endif %}
+  
+
+        {% if logOut %}
+
+
+            <div id="out">
+                <a href= "{{logOut}}"><p>Cerrar sesion</a></p>
+            </div>
+            
+            <div id="actualizar">
+                {% if recargar%}
+                    <form action = {{recargar}} method = "POST">
+                          <input type =hidden name="actualizo" value="actualizar"> 
+                          <input type ="submit" value="Actualizar">  
+                    </form>                   
+                {% endif %}
+            </div>
+
+            <!--   Botones cambio CSS  ------------------------------------> 
+            <div id= "letraPag">
+               {% if css %}
+               <form action={{css}} method="POST">
+                        <p>Tamaño letra:</p>
+                        <input type="text" name="size">
+                        <input type="submit" value="Cambiar">
+               </form>
+
+               <form action={{css}} method="POST">
+                        <p>Color letra y bordes:</p>
+                        <input type=hidden name="color" value="DarkGreen">
+                        <input type="submit" value="Verde">
+               </form>
+
+               <form action={{css}} method="POST">
+                        <input type="hidden" name="color" value="red">
+                        <input type="submit" value="Rojo">
+               </form>
+               <form action={{css}} method="POST">
+                        <input type="hidden" name="color" value="BlueViolet">
+                        <input type="submit" value="Azul">
+               </form>
+
+               {% endif %} 
+            </div>
+            <!--------------------------------------------------------------->
+            {% if ayuda %}
+                <div id="segundo">
+                    <a href= "{{ayuda}}"><p>Ayuda</a></p>
+                </div>
+            {% endif %}
+
+            {% if inicio %}
+                <div id="primero">
+                    <a href= "{{inicio}}"><p>Inicio</a></p>
+                </div>
+            {% endif %}
+
+            {% if todas %}
+                <div id="primero">
+                    <a href= "{{todas}}"><p>Todas</a></p>
+                </div>
+            {% endif %}
+            
+            {% if usuario %}
+                <div id="tercero">
+                       <a href= "{{usuario}}"><p>Mi pagina</a></p>
+                </div>
+            {% endif %}
+
+
+        {% endif %}
+
+
+
+        <div id=filtro>
+                {% if filtro %}
+                    <form action={{filtro}} method="POST">
+                        Buscar por nombre:
+                        <input type="text" name="titulo">
+                        <input type="submit" value="Buscar">
+                    </form>
+                {% endif %}
+       </div>
+
+
+        <div id = filtro2>
+             {% if filtro %}
+                <p>Ordenar por mas me gusta:</p>
+                <form action={{filtro}} method="POST">
+                    <input type= hidden name="filtro" value="megusta"> 
+                    <input type="submit" value="Ordenar" />
+                </form>
+             {% endif %}
+        </div>
+
+        <div id = "nombrePag" >
+            {% if namePag %}
+                <h2><b>{{namePag}}</b></h2>
+            {% endif %}
+        </div>
+        {%if horaActualizacion %}
+            <p>{{horaActualizacion}}</p>
+        {% endif %}
+
+        {%if nEventos %}
+            <p>Numero de eventos disponibles: {{nEventos}}</p>
+        {% endif %}
+        
+        {% if contenido %}
+                <div id = "tabla">
+                    {% for linea in contenido %}
+                    <div id="actividades">
+                        <a href= http://localhost:8000/actividad/{{linea.id}}><p>{{ linea.titulo }}</a></p>
+                        <form action = http://localhost:8000/megusta method = "POST">
+                          <input type =hidden name="idActividad" value={{linea.id}}> 
+                          <input type ="submit" value="Me gusta">  
+                        </form>
+                        {% if insertar %}
+                            <form action = {{insertar}} method = "POST">
+                              <input type =hidden name="idActividad" value={{linea.id}}> 
+                              <input type ="submit" value="Añadir"> 
+                            </form> 
+                        {% endif %}   
+                    </div>
+                    {% endfor %}
+                </div>
+        {% endif %}
+
+
+            {%if canal%}
+               <div id='canal'>
+               {% for line in canal %}
+                    <p><b>Titulo canal:</b> {{line.titulo}}</p>
+                    <a href= http://localhost:8000/{{line.nombre}}><p>{{ line.nombre }}</a></p>
+                    <p><b>Comentario del canal: </b>{{line.comentario}}</p>
+                    <hr>
+               {% endfor %}
+               </div>
+
+            {% endif %}
+
+
+        {% if evento %}
+                <div id="actividad">
+                    <p><b>Titulo: </b>{{evento.titulo}}</p>
+                    <p><b>Tipo: </b>{{evento.tipo}}</p>
+                    <p><b>Fecha y hora inicio evento: </b>{{evento.fecha}}</p>
+                    <p><b>Fecha y hora fin evento: </b>{{evento.fin}}</p>
+                    <p><b>Precio: </b>{{evento.precio}}</p>
+                    <p><b>Duracion: </b>{{evento.largaDuracion}}</p>
+                    <p><b>URL info. adicional: </b></p><a href= {{ evento.url }}><p>{{ evento.url }}</a></p>
+                    <p><b>Descripcion: </b>{{evento.comentario}}</p>
+                    <p><b>Numero me gusta: </b>{{evento.likes}}</p>
+  
+                    {% if fechaInsertado %}
+                         <p><b>Elegida en: </b>{{fechaInsertado}}</p>
+                    {% endif %}
+
+                    {% if insertar %}
+                            <form action = {{insertar}} method = "POST">
+                              <input type =hidden name="idActividad" value={{evento.id}}> 
+                              <input type ="submit" value="Añadir"> 
+                            </form> 
+                    {% endif %}
+                </div>
+        {% endif %}
+        
+        {% if seleccionados %}
+                <div id = tablaPersonal>
+                    
+                    <table frame="border" border="5">
+                        <tr>
+                            <td bgcolor= yellow><strong>Titulo</strong></td>
+                            <td bgcolor= yellow><strong>Fecha actividad</strong></td>
+                            <td bgcolor= yellow><strong>URL info.</strong></td>
+                        </tr>
+
+                        {%for line in seleccionados%}
+                            <tr>
+                                <td><b>{{line.titulo}}<b></td>
+                                <td><b>{{line.fecha}}<b></td>
+                                <td><a href= http://localhost:8000/actividad/{{line.id}}><p>Enlace informacion</a></p></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                 </div> 
+
+        {% endif %}
+        
+        {% if comPage%}
+
+                <div id= comentario>
+                    <form action= {{comPage}} method = "POST">
+                        <textarea name="comentarios" rows="5" cols="30">Escribe aqui tus comentarios</textarea></br>
+                        <input type ="submit" value="Enviar"> 
+                    </form>
+                </div>
+
+                <div id= cambioTitulo>
+                    <form action={{titPage}} method= "POST">
+                        <p>Titulo pagina personal:</p>
+                        <input type="text" name= "titulo">
+                          </br>
+                        <input type="submit" value="Enviar" />
+                     </form>
+                </div>
+        {% endif %}
+
+    </body>
+</html>

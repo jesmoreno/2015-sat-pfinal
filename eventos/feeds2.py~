@@ -1,0 +1,24 @@
+from django.contrib.syndication.views import Feed
+from eventos.models import Events
+from eventos.models import tabUserEvent
+
+class EventosFeed(Feed):
+    # atributos basicos del feed
+    title='Eventos pagina principal'
+    link='http://localhost:8000/'
+    description='10 eventos mas cercanos en el tiempo'
+    
+
+    def items(self, obj):
+        salida = []
+        for linea in obj:
+            salida.append(Events.objects.get(id=linea.idEvento))
+            
+        return salida
+
+    def item_title(self, item):
+        return item.titulo
+   
+    def item_link(self,item):
+             
+        return "http://localhost:8000/actividad/"+str(item.id)
